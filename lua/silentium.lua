@@ -22,6 +22,10 @@ M.colors = {
 	gray = "#737373",
 	dark_gray = "#282828",
 	dark = "#141414",
+	diff_add = "#273C29",
+	diff_change = "#4D4322",
+	diff_delete = "#492523",
+	diff_text = "#857131",
 }
 
 --- Convenience `vim.api.nvim_set_hl()` wrapper
@@ -74,6 +78,10 @@ function M.colorscheme()
 	hl("DiagnosticInfo", { fg = M.accents.cyan })
 	hl("DiagnosticHint", { fg = M.accents.blue })
 	hl("DiagnosticOk", { fg = M.accents.green })
+	hl("DiffAdd", { bg = M.colors.diff_add })
+	hl("DiffChange", { bg = M.colors.diff_change })
+	hl("DiffDelete", { bg = M.colors.diff_delete })
+	hl("DiffText", { bg = M.colors.diff_text })
 	-- Syntax
 	hl("Comment", { fg = M.colors.gray })
 	hl("Function", { fg = M.colors.white })
